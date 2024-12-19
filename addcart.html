@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+#main{
+    width: 100%;
+    /* height: 100; */
+}
+.page-1{
+    width: 100%;
+    height: 100vh;
+    /* background-color: red; */
+    
+}
+.products {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.product {
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 150px;
+}
+.product img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+button {
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border: 1px solid black;
+    /* border: none; */
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.cart {
+    margin-top: 20px;
+}
+
+.cart-items {
+    list-style: none;
+    padding: 0;
+}
+
+.cart-items li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.cart-items button {
+    background-color: #dc3545;
+}
+
+.cart-items button:hover {
+    background-color: #c82333;
+}
+
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div class="page-1">
+            <div class="products">
+                <div class="product" data-id="1">
+                    <img src="./assets/images/product-1.jpg" alt="">
+                    <h3>Animi Dolor Pariatur</h3>
+                       <h2>$10.00</h2>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product" data-id="1">
+                    <img src="./assets/images/product-2.jpg" alt="">
+                    <h3>Animi Dolor Pariatur</h3>
+                    <h2>$60.00</h2>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product" data-id="1">
+                    <img src="./assets/images/product-3.jpg" alt="">
+                    <h3>Animi Dolor Pariatur</h3>
+                    <h2>$59.00</h2>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product" data-id="1">
+                    <img src="./assets/images/product-4.jpg" alt="">
+                    <h3>Animi Dolor Pariatur</h3>
+                    <h2>$69.00</h2>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product" data-id="1">
+                    <img src="./assets/images/product-5.jpg" alt="">
+                    <h3>Animi Dolor Pariatur</h3>
+                       <h2>$17.00</h2>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product" data-id="1">
+                    <img src="./assets/images/product-6.jpg" alt="">
+                    <h3>Animi Dolor Pariatur</h3>
+                    <h2>$18.00</h2>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product" data-id="1">
+                    <img src="./assets/images/product-7.jpg" alt="">
+                    <h3>Animi Dolor Pariatur</h3>
+                    <h2>$17.00</h2>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product" data-id="2">
+                    <img src="./assets/images/product-8.jpg" alt="">
+                    <h3>Animi Dolor Pariatur</h3>
+                    <h2>$14.00</h2>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <!-- Add more products as needed -->
+            </div>
+            <div class="products">
+                <div class="product" data-id="1">
+                    <img src="./assets/images/product-9.jpg" alt="">
+                    <h3>Animi Dolor Pariatur</h3>
+                    <h2>$13.00</h2>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product" data-id="1">
+                    <img src="./assets/images/product-10.jpg" alt="">
+                    <h3>Animi Dolor Pariatur</h3>
+                       <h2>$18.00</h2>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product" data-id="1">
+                    <img src="./assets/images/product-11.jpg" alt="">
+                    <h3>Animi Dolor Pariatur</h3>
+                       <h2>$13.00</h2>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product" data-id="1">
+                    <img src="./assets/images/product-12.jpg" alt="">
+                    <h3>Animi Dolor Pariatur</h3>
+                    <h2>$18.00</h2>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product" data-id="1">
+                    <img src="./assets/images/product-13.jpg" alt="">
+                    <h3>Animi Dolor Pariatur</h3>
+                    <h2>$13.00</h2>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product" data-id="1">
+                    <img src="./assets/images/product-14.jpg" alt="">
+                    <h3>Animi Dolor Pariatur</h3>
+                       <h2>$17.00</h2>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product" data-id="1">
+                    <img src="./assets/images/product-15.jpg" alt="">
+                    <h3>Animi Dolor Pariatur</h3>
+                    <h2>$15.00</h2>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product" data-id="2">
+                    <img src="./assets/images/product-16.jpg" alt="">
+                    <h3>Animi Dolor Pariatur</h3>
+                    <h2>$19.00</h2>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <!-- Add more products as needed -->
+            </div>
+
+            <div class="cart">
+                <h2>Cart</h2>
+                <ul class="cart-items"></ul>
+            </div>
+
+        </div>
+
+
+    </div>
+    
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const products = document.querySelectorAll('.product');
+    const cartItemsContainer = document.querySelector('.cart-items');
+
+    products.forEach(product => {
+        const addToCartButton = product.querySelector('.add-to-cart');
+        addToCartButton.addEventListener('click', () => {
+            const productId = product.getAttribute('data-id');
+            const productName = product.querySelector('h3').textContent;
+
+            addToCart(productId, productName);
+        });
+    });
+
+    function addToCart(productId, productName) {
+        const cartItem = document.createElement('li');
+        cartItem.setAttribute('data-id', productId);
+        cartItem.innerHTML = `
+            ${productName}
+            <button class="remove-from-cart">Remove</button>
+        `;
+
+        const removeFromCartButton = cartItem.querySelector('.remove-from-cart');
+        removeFromCartButton.addEventListener('click', () => {
+            cartItem.remove();
+        });
+
+        cartItemsContainer.appendChild(cartItem);
+    }
+});
+
+</script>
+    <script src="script.js"></script>
+</body>
+</html>
